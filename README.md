@@ -31,13 +31,14 @@ npm install --save redux-form-isomorphic
 Run the following code BEFORE the initial client render.
 
 ```js
+import ReduxFormIsomorphic from 'redux-form-isomorphic';
 
 class App extends Component {
   componentWillMount() {
-    const isomorphicForm = new IsomorphicForm(this.context.store, {
+    const reduxFormIsomorphic = new ReduxFormIsomorphic(this.context.store, {
       login: ['username', 'password']
     });
-    isomorphicForm.rehydrate();
+    reduxFormIsomorphic.rehydrate();
   }
 }
 ```
