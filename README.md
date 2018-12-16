@@ -28,7 +28,7 @@ npm install --save redux-form-isomorphic
 
 ## Usage
 
-Run the following code BEFORE the initial client render
+Run the following code BEFORE the initial client render.
 
 ```js
 
@@ -38,6 +38,22 @@ class App extends Component {
       login: ['username', 'password']
     });
     isomorphicForm.rehydrate();
+  }
+}
+```
+
+Please note that you must explicitly specify the fields you want rehydrated.
+
+You also must name the form, so the rehydration process can find the values.
+
+```js
+class LoginForm {
+  render() {
+    return (
+      <form name="login">
+        {this.renderFields()}
+      </form>
+    );
   }
 }
 ```
