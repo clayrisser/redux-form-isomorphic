@@ -1,0 +1,63 @@
+{
+  "name": "redux-form-isomorphic",
+  "version": "0.0.1",
+  "description": "handle early input to isomorphically rendered forms",
+  "keywords": [
+    "redux-form-isomorphic",
+    "isomorphic",
+    "form",
+    "redux",
+    "redux-form",
+    "early",
+    "input",
+    "react"
+  ],
+  "homepage": "https://github.com/codejamninja/redux-form-isomorphic",
+  "bugs": {
+    "url": "https://github.com/codejamninja/redux-form-isomorphic/issues",
+    "email": "jam@codejam.ninja"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Jam Risser",
+    "email": "jam@codejam.ninja",
+    "url": "https://codejam.ninja"
+  },
+  "files": [
+    "lib"
+  ],
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/codejamninja/redux-form-isomorphic"
+  },
+  "scripts": {
+    "build": "npm run test && babel src -d lib",
+    "clean": "git clean -fXd -e \\!node_modules -e \\!node_modules/**/*",
+    "clean:purge": "git clean -fXd",
+    "format": "prettier --write ./src/**/*.js",
+    "lint": "npm run format && eslint ./",
+    "lint:fix": "npm run format && eslint --fix ./",
+    "prepublish": "npm run build",
+    "start": "babel-node src",
+    "test": "npm run lint"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/cli": "^7.2.0",
+    "@babel/core": "^7.2.2",
+    "@babel/node": "^7.2.2",
+    "babel-preset-jam": "^0.1.0",
+    "eslint": "^5.10.0",
+    "eslint-config-jam": "^0.1.6",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1",
+    "yo": "^2.0.5"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "eslintIgnore": [
+    "lib"
+  ]
+}
