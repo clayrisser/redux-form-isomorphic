@@ -4,6 +4,8 @@
 
 > handle early input to isomorphically rendered forms
 
+![](assets/redux-form-isomorphic.png)
+
 Please ★ this repo if you found it useful ★ ★ ★
 
 
